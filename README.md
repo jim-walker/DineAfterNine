@@ -35,3 +35,41 @@ Standup Meetings
   - 15-30 min Skype/ TP
   - Reserve TP room/ Setup skype meeting 
 
+
+Team Members:
+1. Jim 
+2. Mirian
+3. Genie
+4. Peter
+
+Application Description:
+Dine After Nine 
+
+Break down of Task
+ 
+ <!-- Front End -->
+
+⦁ Create the basic structure HTML (div, elements, wrapper, IDs etc.) - Mirian
+
+⦁ Style CSS elements  - Genie & Mirian
+
+⦁ Create Javascipt DOM manupilation - Jim / Peter
+
+ <!-- Back End -->
+
+⦁	Implement Google Maps API - Genie  
+- Pull Resturant Name
+- Pull location
+- Pull time
+
+⦁	Implement Zomato API - Peter
+- Pull ratings
+- Pull menu
+- Pull time if google time don't work
+
+
+
+
+
+
+
