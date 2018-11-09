@@ -19,30 +19,35 @@
     <div class= 'jumbotron'>
         <h1 class = 'text-center'> <strong>Dine-@fter-Nine</strong></h1>
         <br>
-<!-- Input, button and Filter on next line -->
         <!-- Search input -->
-    <div class="inputsAll">
-    <input type="search" name="zipCode" id="inputZipCode" placeholder="Enter zip code here...">
-    <!-- checkbox option to remember input -->
-            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-            <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
-        <!-- submit button -->
+    <div>
+       <input type="search" name="zipCode" id="inputZipCode" placeholder="Enter zip code here...">
+       <!-- checkbox option to remember input -->
+       <div class="col-auto my-1">
+            <div class="custom-control custom-checkbox mr-sm-2">
+              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+              <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+            </div>
+          </div>
+          <!-- submit button -->
+          <div class="col-auto my-1">
                 <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
         <!-- Filter results by category -->
-
         <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Filter
+                  Filter
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Distance</button>
-                <button class="dropdown-item" type="button">Rating</button>
-                <button class="dropdown-item" type="button">Price</button>
-                <button class="dropdown-item" type="button">Hours</button>
+                  <button class="dropdown-item" type="button">Distance</button>
+                  <button class="dropdown-item" type="button">Rating</button>
+                  <button class="dropdown-item" type="button">Price</button>
+                  <button class="dropdown-item" type="button">Hours</button>
                 </div>
-            </div>
+              </div>
     </div>
-    </div>    
+    </div>
+    <!-- Input, button and Filter on next line -->
     <div>
 
     </div>
