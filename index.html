@@ -1,52 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dine After Nine</title>
-    <!-- Bootstrap links -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- link to css file -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <title>Dine After Nine Test API </title>
 </head>
 <body>
-<div class = 'container'>
-    <div class= 'header'>
-        <h1 class = 'text-center'> <strong>Dine-@fter-Nine</strong></h1>
-        <br>
-<!-- Input, button and Filter on next line -->
-        <!-- Search input -->
-    <div class="inputsAll">
-    <input type="search" name="zipCode" id="inputZipCode" placeholder="Enter zip code here...">   
-        <!-- submit button -->
-            <button type="submit" class="btn btn-primary">Submit</button>
-        <!-- Filter results by category -->
-        <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true">
-                Filter
-    </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Distance</button>
-                <button class="dropdown-item" type="button">Rating</button>
-                <button class="dropdown-item" type="button">Price</button>
-                <button class="dropdown-item" type="button">Hours</button>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:  palevioletred;">
+        <a class="navbar-brand" href="#">Dine After Nine Test API</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+<br>
+    <!-- Search and Filter Section -->
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 ml-10 pl-5" id="filter">
+                    <h5>Restaurant Category Filter</h5>
+                    <!-- Filter Check Boxes -->
+                        <!-- data-text will be the query that the API will search for-->
+                    <div class="form-check">
+                         <input class="form-check-input" type="checkbox" data-text="hamburgers" value="" id="check-diner">
+                        <label class="form-check-label" for="check-diner">Local Diners & Hamburgers</label>
+                    </div> <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-text="breakfast" value="" id="check-breakfast">
+                        <label class="form-check-label" for="check-breakfast">Breakfast</label>
+                    </div> <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-text="japanese" value="" id="check-japanese">
+                        <label class="form-check-label" for="check-japanese">Japanese</label>
+                    </div> <br>
+                    <!-- <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-text="chinese" value="" id="check-Chinese">
+                        <label class="form-check-label" for="check-chinese">Chinese</label>
+                    </div> <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-text="mexican" value="" id="check-Mexican">
+                        <label class="form-check-label" for="check-mexican">Mexican</label>
+                    </div> <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-text="pizza" value="" id="check-pizza">
+                        <label class="form-check-label" for="check-pizza">Pizza</label>
+                    </div> <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-text="desserts" value="" id="check-desserts">
+                        <label class="form-check-label" for="check-desserts">Desserts</label>
+                    </div> <br> -->
+
+                </div>
+                <div id="fade-test" class="col-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="house">Street Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter City">
+                        </div>
+                        <div class="form-group">
+                            <label for="zipcode">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="Enter State">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Zipcode</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter Zipcode">  
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit-geo">Submit</button>
+                    </form>
                 </div>
             </div>
-    </div>
-    </div>    
-    <div>
+         
+         <!-- Category Filter -->
+            <!-- <div class="row">
+                <div class="col-sm-6">
+                    <h6>Restaurant Category Filter</h6> -->
+                    <!-- Filter Check Boxes -->
+                     <!-- data-text will be the query that the API will search for-->
+                     <!--<p>
+                        <label>
+                            <input id="check-diner" data-text="hamburgers" type="checkbox" class="filled-in" />
+                            <span class="select-text">Local Diners & Hamburgers</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="check-breakfast" data-text="breakfast" type="checkbox" class="filled-in" />
+                            <span class="select-text">Breakfast</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="check-japanese" data-text="japanese" type="checkbox" class="filled-in" />
+                            <span class="select-text">Japanese</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="check-chinese" data-text="chinese" type="checkbox" class="filled-in" />
+                            <span class="select-text">Chinese</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="check-mexican" data-text="mexican" type="checkbox" class="filled-in" />
+                            <span class="select-text">Mexican</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="check-pizza" data-text="pizza" type="checkbox" class="filled-in" />
+                            <span class="select-text">Pizza</span>
+                        </label>
+                    </p>
+
+                </div>
+            </div>
+            
+
+     </div> -->
+
+
+    <!-- Recommedations Section  -->
+    <div class = "container-fluid">
+        <!-- Row for Displaying each Resturant Information -->
+        <div class="row">
+            <div class="col-5">
+            <br>
+                <div class="card">
+                <div class="card-header">
+                <strong id="restaurant-name">
+                    <i class="fa fa-list-alt"> Restaurant Recommendations</i></strong>
+                </div>   
+            </div>
+
+            <div class="card-body">
+                <div class="jumbotron">
+                    <div id="rest-info">Restaurant Info & Hours</div>
+                </div> 
+            </div>
+
+            </div>
+
+        <!-- Map Content -->
+            <div class="col-6" id="geo-map">
+  
+            </div>
+
+        </div>
+        
 
     </div>
-</div>
 
-     <!-- jQuery JS -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-     <!-- Code to the JavaScript File -->
-     <script src="app.js"></script>
+    <!-- Footer Region -->
+    <div class="row">
+        <div id="footer" class="justify-content-center fixed-bottom" style="background-color:  palevioletred;">
+            <strong>Copyright 2018 &copy;</strong>
+            </div>
+    </div>
+
+    <!--API Call  -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtDXqrmP1A6NzPFxzjveh5ICYCFywHeKU&libraries=places"></script>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
 </body>
+
 </html>

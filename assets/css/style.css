@@ -1,12 +1,10 @@
-
-.header {
-    margin: 10px;
-    width: 100%;
-    height: 20%;
-    background-color: #382422;
-    color: antiquewhite;
-    
+body{
+    background-color:rgb(255, 162, 178);
+    font-family: 'Vidaloka', serif;
 }
-#inputZipCode {
-  
+/* #geo-map{
+    background-color: yellow;
+} */
+#footer{
+    background-color: rgb(114, 114, 114);
 }
