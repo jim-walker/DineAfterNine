@@ -4,10 +4,13 @@ Coding Bootcamp Project
 User Stories
 
 Idea 1: Restaurants Open after 9PM
-- Google Maps API Key: AIzaSyBCV-XaXEae9Nr0WjrZyfHjm5bUi6CfZRs 
+- Google Maps API Key: AIzaSyBtDXqrmP1A6NzPFxzjveh5ICYCFywHeKU
+- Geocoding API
+- Maps Javascript API
+- Paces API for Web
+
 https://console.cloud.google.com/google/maps-apis/api-list?consoleUI=CLOUD&project=dine-after-nine-1541637888087
-- Zomato API Key:  342bdd6bb8fe479b4c3407ff86e95fb2
-  https://developers.zomato.com/api#
+
 
 MVP User Stories
 1. As a user, I want to search for a restaurant open in my location after 9PM.
@@ -34,7 +37,6 @@ Standup Meetings
   - Monday and Thursday
   - 15-30 min Skype/ TP
   - Reserve TP room/ Setup skype meeting 
-
 
 Team Members:
 1. Jim 
@@ -66,6 +68,7 @@ Break down of Task
 - Pull ratings
 - Pull menu
 - Pull time if google time don't work
+- Price
 
 
 

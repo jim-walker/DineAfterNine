@@ -50,15 +50,15 @@
                         <label class="form-check-label" for="check-breakfast">Breakfast</label>
                     </div> <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-text="japanese" value="" id="check-japanese">
+                        <input class="form-check-input" type="checkbox" data-text="japanese restaurant" value="" id="check-japanese">
                         <label class="form-check-label" for="check-japanese">Japanese</label>
                     </div> <br>
-                    <!-- <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-text="chinese" value="" id="check-Chinese">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-text="chinese restaurant" value="" id="check-chinese">
                         <label class="form-check-label" for="check-chinese">Chinese</label>
                     </div> <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-text="mexican" value="" id="check-Mexican">
+                        <input class="form-check-input" type="checkbox" data-text="mexican restaurant" value="" id="check-mexican">
                         <label class="form-check-label" for="check-mexican">Mexican</label>
                     </div> <br>
                     <div class="form-check">
@@ -68,7 +68,7 @@
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" data-text="desserts" value="" id="check-desserts">
                         <label class="form-check-label" for="check-desserts">Desserts</label>
-                    </div> <br> -->
+                    </div> <br>
 
                 </div>
                 <div id="fade-test" class="col-6">
@@ -87,90 +87,48 @@
                         </div>
                         <div class="form-group">
                             <label for="city">Zipcode</label>
-                            <input type="text" class="form-control" id="city" placeholder="Enter Zipcode">  
+                            <input type="text" class="form-control" id="zipcode" placeholder="Enter Zipcode">  
                         </div>
                         <button type="submit" class="btn btn-primary" id="submit-geo">Submit</button>
                     </form>
                 </div>
             </div>
-         
-         <!-- Category Filter -->
-            <!-- <div class="row">
-                <div class="col-sm-6">
-                    <h6>Restaurant Category Filter</h6> -->
-                    <!-- Filter Check Boxes -->
-                     <!-- data-text will be the query that the API will search for-->
-                     <!--<p>
-                        <label>
-                            <input id="check-diner" data-text="hamburgers" type="checkbox" class="filled-in" />
-                            <span class="select-text">Local Diners & Hamburgers</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input id="check-breakfast" data-text="breakfast" type="checkbox" class="filled-in" />
-                            <span class="select-text">Breakfast</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input id="check-japanese" data-text="japanese" type="checkbox" class="filled-in" />
-                            <span class="select-text">Japanese</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input id="check-chinese" data-text="chinese" type="checkbox" class="filled-in" />
-                            <span class="select-text">Chinese</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input id="check-mexican" data-text="mexican" type="checkbox" class="filled-in" />
-                            <span class="select-text">Mexican</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input id="check-pizza" data-text="pizza" type="checkbox" class="filled-in" />
-                            <span class="select-text">Pizza</span>
-                        </label>
-                    </p>
-
-                </div>
-            </div>
-            
-
-     </div> -->
-
-
+            <div><br><br></div>
+       
     <!-- Recommedations Section  -->
-    <div class = "container-fluid">
+    <div class="container-fluid">
         <!-- Row for Displaying each Resturant Information -->
         <div class="row">
             <div class="col-5">
-            <br>
-                <div class="card">
-                <div class="card-header">
-                <strong id="restaurant-name">
-                    <i class="fa fa-list-alt"> Restaurant Recommendations</i></strong>
-                </div>   
-            </div>
+                <br>
+                    <div class="card">
+                    <div class="card-header">
+                    <strong id="restaurant-name">
+                        <i class="fa fa-list-alt"> Restaurant Recommendations</i></strong>
+                    </div>   
+                </div>
 
-            <div class="card-body">
-                <div class="jumbotron">
+                <div class="card-body">
+                    <div class="jumbotron">
+                        <div id="rest-info">Restaurant Info & Hours</div>
+                    </div> 
+                </div>
+
+                </div>
+
+            <!-- <div class="row">
+                <div class="col-5">
                     <div id="rest-info">Restaurant Info & Hours</div>
-                </div> 
-            </div>
+                
+                </div> -->
+        
+            <!-- Map Content -->
+        
+                <div class="col-6" id="geo-map">
+    
+                </div>
 
             </div>
-
-        <!-- Map Content -->
-            <div class="col-6" id="geo-map">
-  
-            </div>
-
-        </div>
         
 
     </div>
@@ -186,10 +144,11 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtDXqrmP1A6NzPFxzjveh5ICYCFywHeKU&libraries=places"></script>
      <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/api.js"></script>
 </body>
 
 </html>
