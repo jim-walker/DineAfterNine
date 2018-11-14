@@ -8,3 +8,22 @@ body{
 #footer{
     background-color: rgb(114, 114, 114);
 }
+/* ul {
+    align-content: space-between;
+} */
+#navbarNav {
+    justify-content: flex-end;
+}
+
+#footer {
+    
+}
+
+.pagetitle{
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.aboutUs {
+    background-color: beige;
+}

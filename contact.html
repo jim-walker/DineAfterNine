@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!-- page title -->
+    <title>Contact @ Dine After Nine</title>
+  </head>
+  <!--My CSS -->
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:  palevioletred;">
+                <a class="navbar-brand" href="#">Dine After Nine</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+        <br>
+            
+<!--main content - page specific-->
+<div class="maincontent">
+<form>
+        <div class="container Header">
+                <div class="row">
+                  <div class="col-sm pagetitle"> <h1>Contact Us</h1></div>
+                </div>
+                <div class="linebreak"></div>
+        <div class="form-group">
+                <label for="name">Name</label>
+                <input type="string" class="form-control" id="nameinput" placeholder="Enter your name here...">
+              </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="emailinput" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="textarea">Message</label>
+          <textarea class="form-control" id="messageinput" rows="6" placeholder="write your message here"></textarea>
+        </div>
+      </form>
+      <div class="btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="checkbox" checked autocomplete="off"> Send
+            </label>
+          </div>
+</div>
+<!--outside the container-->
+    <!-- Footer Region -->
+    <div class="row">
+            <div id="footer" class="justify-content-center fixed-bottom" style="background-color:  palevioletred;">
+                <strong>Copyright 2018 &copy;</strong>
+                </div>
+        </div>
+    
+        <!--API Call  -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtDXqrmP1A6NzPFxzjveh5ICYCFywHeKU&libraries=places"></script>
+         <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+    
+    </html>
