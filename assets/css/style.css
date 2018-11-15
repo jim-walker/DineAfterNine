@@ -2,21 +2,18 @@ body{
     background-color:rgb(255, 162, 178);
     font-family: 'Vidaloka', serif;
 }
-/* #geo-map{
-    background-color: yellow;
-} */
+
+#geo-map{
+    width: 400px;
+    height: 500px;
+}
+
 #footer{
     background-color: rgb(114, 114, 114);
 }
-/* ul {
-    align-content: space-between;
-} */
+
 #navbarNav {
     justify-content: flex-end;
-}
-
-#footer {
-    
 }
 
 .pagetitle{

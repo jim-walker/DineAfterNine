@@ -323,15 +323,27 @@ const renderMarks = (map, idArr) => {
                     }
 
                 }
-                //if the place rating is greater than or equal to 4.6, render the following content to the 'restuarant recommendations' div
+                //if the place rating is greater than or equal to 4.0, render the following content to the 'restaurant recommendations' div
 
                 if (place.rating >= 4.0) {
 
-                    let text = $('<div id="fade-test"><strong>' + place.name + '</strong><br>' +
-                        'Rating: ' + place.rating + checkPhone() +
-                        '</div>' + getTravelUrl(address, place.formatted_address));
-
-                    $("#rest-info").append(text);
+                    $("#rest-info").append(
+                        `
+                        <div class="card my-3">
+                        <h5 class="card-header">Restaurant ${i + 1}: ${place.name}</h5>
+                        <div class="card-body">
+                            <!-- restaurant info get populated here -->
+                            <p class="card-text">${('<div id="fade-test"><strong>' + place.name + '</strong><br>' +
+                            'Rating: ' + place.rating + checkPhone() +
+                            '</div>' + getTravelUrl(address, place.formatted_address))}</p>
+                        </div>
+                        <div class="card-footer">
+                        <!-- restaurant url population -->
+                        <a href="#" class="card-link" target="_blank">Link to Resturant Website</a>
+                        </div>
+                        </div>
+                        `
+                    );
 
                     console.log("Code is working");
 
