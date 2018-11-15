@@ -1,10 +1,35 @@
+body, html {
+    height: 100%;
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("https://images.agoramedia.com/everydayhealth/gcms/Eating-Right-With-Lupus-1440x810.jpg?width=722");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
 body{
     background-color:rgb(255, 162, 178);
     font-family: 'Vidaloka', serif;
 }
-/* #geo-map{
-    background-color: yellow;
-} */
+.ptag-area {
+height: 200px;
+}
+
+
 #footer{
     background-color: rgb(114, 114, 114);
 }
@@ -25,5 +50,6 @@ body{
 }
 
 .aboutUs {
-    background-color: beige;
+    background-color: white;
+    
 }
