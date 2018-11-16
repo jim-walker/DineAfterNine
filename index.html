@@ -21,7 +21,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -71,7 +71,7 @@
                     </div> <br>
 
                 </div>
-                <div id="fade-test" class="col-6">
+                <div id="fade-test" class="col-sm-6">
                     <form>
                         <div class="form-group">
                             <label for="house">Street Address</label>
@@ -99,7 +99,13 @@
     <div class="container-fluid">
         <!-- Row for Displaying each Resturant Information -->
         <div class="row">
-            <div class="col-5">
+              <!-- Map Content -->
+        
+              <div class="col-sm-6" id="geo-map">
+    
+                </div>
+                <!-- restaurant cards -->
+            <div class="col-sm-5">
                 <br>
                     <div class="card">
                     <div class="card-header">
@@ -109,18 +115,13 @@
                 </div>
 
                 <div class="card-body">
-                    <div class="jumbotron">
                         <div id="rest-info">Restaurant Info & Hours</div>
                     </div> 
                 </div>
-
+                
                 </div>
         
-            <!-- Map Content -->
-        
-                <div class="col-6" id="geo-map">
-    
-                </div>
+           
 
             </div>
         
