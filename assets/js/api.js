@@ -323,9 +323,36 @@ const renderMarks = (map, idArr) => {
                     }
 
                 }
-                //if the place rating is greater than or equal to 4.0, render the following content to the 'restaurant recommendations' div
 
-                if (place.rating >= 4.0) {
+                //Function to check to retrieve opening hours for the day the applicaiton is running
+                function checkHours() {
+                    let isOpen = place.opening_hours.open_now;
+                    let hours = place.opening_hours.weekday_text;
+                    var dayOfTheWeekIndex = new Date().getDay();
+                    let displayHours = "";
+                    
+                    if(isOpen === true)
+                    {
+                        --dayOfTheWeekIndex;
+                        if (dayOfTheWeekIndex<0)
+                        {
+                            dayOfTheWeekIndex=6;
+                        }
+                        
+                        displayHours = hours[dayOfTheWeekIndex];
+                        
+                        return `${displayHours}`;
+                    }
+                    else
+                    {
+                        return `<br>`;
+
+                    }
+                }
+
+                //if the place rating is greater than or equal to 4.5, render the following content to the 'restaurant recommendations' div
+
+                if (place.rating >= 4.5) {
 
                     $("#rest-info").append(
                         `
@@ -334,12 +361,12 @@ const renderMarks = (map, idArr) => {
                         <div class="card-body">
                             <!-- restaurant info get populated here -->
                             <p class="card-text">${('<div id="fade-test"><strong>' + place.name + '</strong><br>' +
-                            'Rating: ' + place.rating + checkPhone() +
-                            '</div>' + getTravelUrl(address, place.formatted_address))}</p>
+                            'Rating: ' + place.rating + '<br>Hours Open: ' + checkHours() + checkPhone() +
+                            '</div>' + getTravelUrl(address, place.formatted_address)) } </p>
                         </div>
                         <div class="card-footer">
                         <!-- restaurant url population -->
-                        <a href="#" class="card-link" target="_blank">Link to Resturant Website</a>
+                        <a href="${place.website}" class="card-link" target="_blank">Check out menu on Website!</a>
                         </div>
                         </div>
                         `
@@ -349,7 +376,7 @@ const renderMarks = (map, idArr) => {
 
                 }
 
-                if (place.rating >= 4.0) {
+                if (place.rating >= 4.5) {
                     let gPlace = {
                         name: place.name,
                         rating: place.rating,
@@ -369,6 +396,7 @@ const renderMarks = (map, idArr) => {
 
 }
 
+//Function to get the Travel Direction to resturant with URL 
 const getTravelUrl = (origin, destination) => {
     return `<a href="https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=driving" target="_blank">${destination}</a>`;
 }
