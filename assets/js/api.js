@@ -376,23 +376,10 @@ const renderMarks = (map, idArr) => {
 
                 }
 
-                if (place.rating >= 4.5) {
-                    let gPlace = {
-                        name: place.name,
-                        rating: place.rating,
-                        phone: checkPhone(),
-                        address: place.formatted_address
-
-                    }
-
-                    placesToDump.push(gPlace);
-
-
-                }
             }
         });
     }
-    console.log(placesToDump);
+    
 
 }
 
