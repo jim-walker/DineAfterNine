@@ -27,6 +27,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    scroll-behavior: smooth;
 }
 
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
@@ -70,11 +71,18 @@ color: blueviolet;
 #navbarNav {
     justify-content: flex-end;
 }
+.navBar {
+    font-weight: 300px;
+    letter-spacing: 3px;
+    font-size: 2.6rem;
+}
 
 .pagetitle{
-    line-height: 20px;
+    line-height: 30px;
     margin-bottom: 20px;
     padding-top: 40px;
+    letter-spacing: 3px;
+    font-size: 1.6rem;
 }
 /* #text-center {
     text-align: center!important;
@@ -94,8 +102,3 @@ color: blueviolet;
     font-size: 60px;
     color: blueviolet;
 }
-
-/* .aboutUs {
-    background-color: white;
-    
-} */
