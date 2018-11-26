@@ -71,10 +71,14 @@ color: blueviolet;
 #navbarNav {
     justify-content: flex-end;
 }
+.navbar-brand{
+    padding-left: 10px;
+}
 .navBar {
     font-weight: 300px;
     letter-spacing: 3px;
     font-size: 2.6rem;
+    margin-bottom: 400px;
 }
 
 .pagetitle{
