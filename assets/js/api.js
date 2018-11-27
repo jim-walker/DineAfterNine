@@ -214,7 +214,6 @@ $('#submit-geo').on('click', function (event) {
 
 
             let source = response.results;
-            // console.log(source);
             for (let i = 0; i < source.length; i++) {
                 //creates a variable that will hold the users lat and lng coordinates
                 coords = { lat: source[i].geometry.location.lat, lng: source[i].geometry.location.lng };
@@ -261,14 +260,28 @@ const getRestPlaces = (coords) => {
         }
     }).then(function (response) {
 
+        const dynamicSort=function(property) {
+           var sortOrder = -1;
+           if(property[0] === "-") {
+              sortOrder = -1;
+              property = property.substr(1);
+            }
+            return function (a,b) {
+                var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+                return result * sortOrder;
+           }
+        }
+
         let source = response.results;
         for (let i = 0; i < source.length; i++) {
             //create obj that holds an id of the place received by the api
             let place = {
-                id: source[i].place_id
-            }
+                id: source[i].place_id,
+                rating: source[i].rating,
+            };
             //pushes place id into restuarantIDs
             restuarantIDs.push(place);
+            restuarantIDs.sort(dynamicSort("rating"));
 
         }
         //renders place markers to the map
@@ -287,6 +300,7 @@ const renderMarks = (map, idArr) => {
             //passes ids for each of the places in the array
             placeId: idArr[i].id
         }, function (place, status) {
+            
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 //create for a place
                 let marker = new google.maps.Marker({
@@ -349,6 +363,7 @@ const renderMarks = (map, idArr) => {
 
                     }
                 }
+                }
 
                 //if the place rating is greater than or equal to 4.5, render the following content to the 'restaurant recommendations' div
 
@@ -371,11 +386,6 @@ const renderMarks = (map, idArr) => {
                         </div>
                         `
                     );
-
-                    console.log("Code is working");
-
-                }
-
             }
         });
     }
