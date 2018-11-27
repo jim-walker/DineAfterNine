@@ -43,6 +43,7 @@ body, html {
 
 body{
     background-color:rgb(255, 162, 178);
+    /* background-color:  #94c849; */
     font-family: 'Vidaloka', serif;
 }
 
@@ -66,6 +67,9 @@ color: blueviolet;
     background-color: rgb(114, 114, 114);
     text-align: center;
     font: menu;
+}
+.navbar-brand a {
+    font-size: 1.85 rem !important;
 }
 
 #navbarNav {

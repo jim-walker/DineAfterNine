@@ -345,7 +345,7 @@ const renderMarks = (map, idArr) => {
                     }
                     else
                     {
-                        return `<br>`;
+                        return `Closed`;
 
                     }
                 }
@@ -360,7 +360,7 @@ const renderMarks = (map, idArr) => {
                         <h5 class="card-header">Restaurant ${i + 1}: ${place.name}</h5>
                         <div class="card-body">
                             <!-- restaurant info get populated here -->
-                            <p class="card-text">${('<div id="fade-test"><strong>' + place.name + '</strong><br>' +
+                            <p class="card-text">${('<div id="fade-test">' +
                             'Rating: ' + place.rating + '<br>Hours Open: ' + checkHours() + checkPhone() +
                             '</div>' + getTravelUrl(address, place.formatted_address)) } </p>
                         </div>

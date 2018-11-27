@@ -4,15 +4,17 @@ Coding Bootcamp Project
 User Stories
 
 Idea 1: Restaurants Open after 9PM
+
+API Used:
 - Google Maps API Key: AIzaSyBtDXqrmP1A6NzPFxzjveh5ICYCFywHeKU
 - Geocoding API
 - Maps Javascript API
-- Paces API for Web
+- Places API for Web
 
 https://console.cloud.google.com/google/maps-apis/api-list?consoleUI=CLOUD&project=dine-after-nine-1541637888087
 
 
-MVP User Stories
+MVP User Stories:
 1. As a user, I want to search for a restaurant open in my location after 9PM.
 2. As a user, I want to be able to review ratings for searched restaurants.
 3. As a user, I want to view menu or website.
@@ -59,17 +61,20 @@ Break down of Task
 
  <!-- Back End -->
 
-⦁	Implement Google Maps API - Genie  
+⦁	Implement Google Maps API GeoLocation- Genie  
 - Pull Resturant Name
 - Pull location
 - Pull time
 
-⦁	Implement Zomato API - Peter
+⦁	Implement Google Places API - Jim/Genie
 - Pull ratings
 - Pull menu
 - Pull time if google time don't work
 - Price
 
+New Technology
+- Parallax
+- Jquery Plugin
 
 
 
