@@ -363,7 +363,6 @@ const renderMarks = (map, idArr) => {
 
                     }
                 }
-                }
 
                 //if the place rating is greater than or equal to 4.5, render the following content to the 'restaurant recommendations' div
 
@@ -386,7 +385,8 @@ const renderMarks = (map, idArr) => {
                         </div>
                         `
                     );
-            }
+                }
+                }
         });
     }
     
