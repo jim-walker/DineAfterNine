@@ -59,12 +59,12 @@ Break down of Task
 
  <!-- Back End -->
 
-⦁	Implement Google Maps API - Genie  
+⦁	Implement Google Maps API GeoLocation- Genie  
 - Pull Resturant Name
 - Pull location
 - Pull time
 
-⦁	Implement Zomato API - Peter
+⦁	Implement Google Places API - Peter/Genie
 - Pull ratings
 - Pull menu
 - Pull time if google time don't work
