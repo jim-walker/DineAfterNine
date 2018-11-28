@@ -71,6 +71,7 @@ Break down of Task
 - Prices
 
 New Technology
+- Textillate
 - Parallax
 
 
