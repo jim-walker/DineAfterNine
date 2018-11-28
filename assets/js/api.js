@@ -294,7 +294,7 @@ const renderMarks = (map, idArr) => {
     let infowindow = new google.maps.InfoWindow();
     // initialize google place details service
     let service = new google.maps.places.PlacesService(map);
-    for (let i = 0; i < idArr.length; i++) {
+    for (let i = 0; i < 10; i++) {
 
         service.getDetails({
             //passes ids for each of the places in the array
@@ -386,7 +386,7 @@ const renderMarks = (map, idArr) => {
                         `
                     );
                 }
-                }
+             }
         });
     }
     

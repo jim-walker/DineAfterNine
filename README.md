@@ -70,7 +70,7 @@ Break down of Task
 - Pull ratings
 - Pull menu
 - Pull time if google time don't work
-- Price
+- Prices
 
 New Technology
 - Parallax
