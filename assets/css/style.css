@@ -1,6 +1,5 @@
-body, html {
-    height: 100%;
-}
+/* body, html {
+} */
 
 .parallax { 
     /* The image used */
@@ -42,9 +41,13 @@ body, html {
 }
 
 body{
-    background-color:rgb(255, 162, 178);
-    /* background-color:  #94c849; */
-    font-family: 'Vidaloka', serif;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1a3b7ITILL7HxYNr1HWxh2ATm5r91gPl_yADfalcLbdbkK4J");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(44, 165, 68);
+    height: 100%;
 }
 
 .ptag-area {
@@ -64,20 +67,24 @@ color: blueviolet;
     margin-left: 15%;
 }
 #footer{
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(44, 165, 68);
     text-align: center;
     font: menu;
+    color: rgb(23, 23, 24);
 }
 .navbar-brand a {
-    font-size: 1.85 rem !important;
+    font-size: x-large;
 }
 
 #navbarNav {
     justify-content: flex-end;
+    
 }
 .navbar-brand{
     padding-left: 10px;
-
+}
+body > nav {
+    background-color:rgb(44, 165, 68);
 }
 .navBar {
     font-weight: 300px;
@@ -92,6 +99,7 @@ color: blueviolet;
     padding-top: 40px;
     letter-spacing: 3px;
     font-size: 1.6rem;
+    text-align: center;
 }
 /* #text-center {
     text-align: center!important;
