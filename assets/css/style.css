@@ -1,7 +1,9 @@
-/* body, html {
-} */
+html {
+    position:relative;
+    min-height:100%;
+}
 
-.parallax { 
+/* .parallax { 
     /* The image used */
     /* background-image: url("https://images.agoramedia.com/everydayhealth/gcms/Eating-Right-With-Lupus-1440x810.jpg?width=722"); */
 
@@ -12,8 +14,8 @@
     /* background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
-}
+    background-size: cover; 
+} */
 
 .parallax::before {
     content: "";
@@ -41,7 +43,7 @@
 }
 
 body{
-    background-image: url("../images/dinner-dish-egg-54455.jpg");
+    background-image: url("../images/dinner-dish-egg_2400x1440.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,14 +103,6 @@ body > nav {
     font-size: 1.6rem;
     text-align: center;
 }
-/* #text-center {
-    text-align: center!important;
-    box-sizing: border-box;
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    font-size: 60px;
-} */
 .mid-word {
     text-align: center;
     box-sizing: border-box;
