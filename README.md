@@ -20,19 +20,17 @@ MVP User Stories:
 3. As a user, I want to view menu or website.
 
 - User Input
-  - Location by zip code or google maps current location
+  - Location by zip code or address
   
 Filters
- - Ratings
- - Price
  - Type of Food
 
 API/ Display
  - Restaurant Name - Google Maps
- - Hours Open (9PM- 2AM) - Google Maps
- - Ratings - Zomato
- - Menu/ Website Link - Zomato
- - Address/Location - Google Maps
+ - Hours Open (9PM- 2AM) - Google Maps 
+ - Ratings - Google Places
+ - Menu/ Website Link - Google Places
+ - Address/Location - Google Geolocation
   
 
 Standup Meetings
@@ -57,7 +55,7 @@ Break down of Task
 
 ⦁ Style CSS elements  - Genie & Mirian
 
-⦁ Create Javascipt DOM manupilation - Jim / Peter
+⦁ Create Javascipt DOM manupilation - Jim / Genie
 
  <!-- Back End -->
 
@@ -74,7 +72,7 @@ Break down of Task
 
 New Technology
 - Parallax
-- Jquery Plugin
+
 
 
 

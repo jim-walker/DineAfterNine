@@ -371,7 +371,7 @@ const renderMarks = (map, idArr) => {
                     $("#rest-info").append(
                         `
                         <div class="card my-3">
-                        <h5 class="card-header">Restaurant ${i + 1}: ${place.name}</h5>
+                        <h5 class="card-header">${place.name}</h5>
                         <div class="card-body">
                             <!-- restaurant info get populated here -->
                             <p class="card-text">${('<div id="fade-test">' +
