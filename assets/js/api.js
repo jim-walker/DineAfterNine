@@ -20,6 +20,7 @@ let placesToDump = [];
 
 
 $(document).ready(function () {
+    $('#mainTitle').textillate({ in: { effect: 'rollIn' } });
     $(".form-check-input").on("click", function () {
         $(this).attr("isSelected", "true");
         $('#rest-info').empty();
