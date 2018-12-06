@@ -6,13 +6,10 @@ User Stories
 Idea 1: Restaurants Open after 9PM
 
 API Used:
-- Google Maps API Key: AIzaSyBtDXqrmP1A6NzPFxzjveh5ICYCFywHeKU
+- Google Maps API
 - Geocoding API
 - Maps Javascript API
 - Places API for Web
-
-https://console.cloud.google.com/google/maps-apis/api-list?consoleUI=CLOUD&project=dine-after-nine-1541637888087
-
 
 MVP User Stories:
 1. As a user, I want to search for a restaurant open in my location after 9PM.
